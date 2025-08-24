@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('login\ bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 430px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            border-radius: 10px;
+            padding: 30px 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .wrapper h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .wrapper .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: black;
+            outline: none;
+            padding-left: 10px;
+            transition: all 0.3s;
+        }
+
+        .input-box input::placeholder {
+            color: grey;
+            transition: all 0.3s;
+        }
+
+        .input-box input:focus {
+            border-color: blue;
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+        }
+
+        .input-box input:hover:not(:focus) {
+            border-color: lightblue;
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        .remember-forget {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            margin: -15px 0 15px;
+        }
+
+        .remember-forget label input {
+            margin-right: 3px;
+        }
+
+        .remember-forget a {
+            color: blue;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .remember-forget a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            height: 40px;
+            background: blue;
+            color: white;
+            border-radius: 40px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            background: darkblue;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-link {
+            font-size: 15px;
+            text-align: center;
+            margin: 20px 0 15px;
+            color: black;
+        }
+
+        .register-link p a {
+            text-decoration: none;
+            color: blue;
+            font-weight: 600;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .wrapper {
+                padding: 20px;
+            }
+
+            .wrapper h1 {
+                font-size: 28px;
+            }
+
+            .input-box {
+                height: 40px;
+            }
+
+            .input-box input {
+                font-size: 14px;
+            }
+
+            .input-box i {
+                font-size: 18px;
+            }
+
+            .remember-forget {
+                font-size: 13px;
+            }
+
+            .btn {
+                height: 35px;
+                font-size: 14px;
+            }
+
+            .register-link {
+                font-size: 13px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" aria-label="Username" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password" aria-label="Password" required>
+            </div>
+            <div class="remember-forget">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Signup</a></p>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
